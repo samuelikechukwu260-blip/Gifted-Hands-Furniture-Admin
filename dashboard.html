@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Gifted Hands Admin</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     ADMIN LAYOUT
+===================================================== -->
+
+<div class="admin-layout">
+
+
+    <!-- =================================================
+         SIDEBAR
+    ================================================== -->
+
+    <aside class="admin-sidebar" id="admin-sidebar">
+
+        <div class="admin-sidebar-top">
+
+            <div class="admin-logo">
+
+                <div class="brand-mark">
+                    GH
+                </div>
+
+                <div>
+                    <h2>GIFTED HANDS</h2>
+                    <span>ADMIN PANEL</span>
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="sidebar-close"
+                id="sidebar-close"
+                aria-label="Close menu"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="admin-nav">
+
+            <a
+                href="dashboard.html"
+                class="admin-nav-link active"
+            >
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="post.html"
+                class="admin-nav-link"
+            >
+                <i class="fa-solid fa-plus"></i>
+                <span>New Project</span>
+            </a>
+
+
+            <a
+                href="../projects.html"
+                class="admin-nav-link"
+                target="_blank"
+                rel="noopener"
+            >
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <span>View Website</span>
+            </a>
+
+        </nav>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="admin-sidebar-bottom">
+
+            <button
+                type="button"
+                id="logout-button"
+                class="logout-button"
+            >
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =================================================
+         MAIN CONTENT
+    ================================================== -->
+
+    <main class="admin-main">
+
+
+        <!-- TOP BAR -->
+
+        <header class="admin-topbar">
+
+            <button
+                type="button"
+                class="menu-button"
+                id="menu-button"
+                aria-label="Open menu"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+
+            <div class="topbar-title">
+
+                <span>GIFTED HANDS</span>
+
+                <h1>Dashboard</h1>
+
+            </div>
+
+
+            <div class="admin-user">
+
+                <div class="admin-user-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="admin-user-info">
+
+                    <strong id="admin-email">
+                        Admin
+                    </strong>
+
+                    <small>
+                        Administrator
+                    </small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENT -->
+
+        <section class="dashboard-content">
+
+
+            <!-- PAGE INTRO -->
+
+            <div class="dashboard-intro">
+
+                <div>
+
+                    <span class="admin-label">
+                        ADMINISTRATION
+                    </span>
+
+                    <h2>
+                        Manage your <span>portfolio.</span>
+                    </h2>
+
+                    <p>
+                        Create, edit and manage the projects displayed
+                        on the Gifted Hands website.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="post.html"
+                    class="admin-gold-button"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                    ADD PROJECT
+                </a>
+
+            </div>
+
+
+            <!-- =================================================
+                 STATISTICS
+            ================================================== -->
+
+            <div class="dashboard-stats">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-folder-open"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            TOTAL PROJECTS
+                        </span>
+
+                        <strong id="total-projects">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            PUBLISHED
+                        </span>
+
+                        <strong id="published-projects">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            FEATURED
+                        </span>
+
+                        <strong id="featured-projects">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            CATEGORIES
+                        </span>
+
+                        <strong id="project-categories">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PROJECTS PANEL
+            ================================================== -->
+
+            <div class="dashboard-panel">
+
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="admin-label">
+                            PORTFOLIO
+                        </span>
+
+                        <h3>
+                            Your Projects
+                        </h3>
+
+                    </div>
+
+
+                    <a
+                        href="post.html"
+                        class="panel-add-button"
+                    >
+                        <i class="fa-solid fa-plus"></i>
+                        New Project
+                    </a>
+
+                </div>
+
+
+                <!-- SEARCH + FILTER -->
+
+                <div class="project-toolbar">
+
+                    <div class="admin-search">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="search"
+                            id="project-search"
+                            placeholder="Search projects..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <select
+                        id="category-filter"
+                        class="category-filter"
+                    >
+
+                        <option value="all">
+                            All Categories
+                        </option>
+
+                        <option value="Living Room">
+                            Living Room
+                        </option>
+
+                        <option value="Bedroom">
+                            Bedroom
+                        </option>
+
+                        <option value="Dining">
+                            Dining
+                        </option>
+
+                        <option value="Office">
+                            Office
+                        </option>
+
+                        <option value="Custom Furniture">
+                            Custom Furniture
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- =================================================
+                     PROJECT TABLE
+                ================================================== -->
+
+                <div class="projects-table-wrapper">
+
+                    <table class="projects-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    PROJECT
+                                </th>
+
+                                <th>
+                                    CATEGORY
+                                </th>
+
+                                <th>
+                                    LOCATION
+                                </th>
+
+                                <th>
+                                    STATUS
+                                </th>
+
+                                <th>
+                                    FEATURED
+                                </th>
+
+                                <th>
+                                    ACTIONS
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="admin-projects-list">
+
+                            <!-- JavaScript will insert projects here -->
+
+                            <tr id="projects-loading-row">
+
+                                <td
+                                    colspan="6"
+                                    class="table-loading"
+                                >
+
+                                    <div class="loading-spinner"></div>
+
+                                    <span>
+                                        Loading projects...
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- EMPTY STATE -->
+
+                <div
+                    id="empty-projects"
+                    class="empty-projects"
+                >
+
+                    <div class="empty-icon">
+                        <i class="fa-solid fa-couch"></i>
+                    </div>
+
+                    <h3>
+                        No projects yet
+                    </h3>
+
+                    <p>
+                        Start building your portfolio by adding
+                        your first project.
+                    </p>
+
+                    <a
+                        href="post.html"
+                        class="admin-gold-button"
+                    >
+                        <i class="fa-solid fa-plus"></i>
+                        ADD FIRST PROJECT
+                    </a>
+
+                </div>
+
+
+                <!-- SEARCH EMPTY STATE -->
+
+                <div
+                    id="no-search-results"
+                    class="empty-projects"
+                >
+
+                    <div class="empty-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+
+                    <h3>
+                        No projects found
+                    </h3>
+
+                    <p>
+                        Try another search or category.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 QUICK ACTIONS
+            ================================================== -->
+
+            <div class="quick-actions">
+
+                <div class="quick-action">
+
+                    <div class="quick-action-icon">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Add Project
+                        </h3>
+
+                        <p>
+                            Upload a new project to your portfolio.
+                        </p>
+
+                    </div>
+
+                    <a href="post.html">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="quick-action">
+
+                    <div class="quick-action-icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            View Website
+                        </h3>
+
+                        <p>
+                            See how your public portfolio looks.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="../projects.html"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer class="admin-footer">
+
+            <p>
+                © 2026 Gifted Hands Furniture & Interior Designs.
+                Admin Panel.
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- =====================================================
+     DELETE CONFIRMATION MODAL
+===================================================== -->
+
+<div
+    class="admin-modal"
+    id="delete-modal"
+    aria-hidden="true"
+>
+
+    <div class="admin-modal-overlay"></div>
+
+    <div class="admin-modal-box">
+
+        <button
+            type="button"
+            class="modal-close"
+            id="delete-modal-close"
+            aria-label="Close"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <div class="modal-warning-icon">
+
+            <i class="fa-solid fa-trash"></i>
+
+        </div>
+
+
+        <h2>
+            Delete Project?
+        </h2>
+
+
+        <p>
+            Are you sure you want to delete
+            <strong id="delete-project-name">
+                this project
+            </strong>?
+            This action cannot be undone.
+        </p>
+
+
+        <div class="modal-actions">
+
+            <button
+                type="button"
+                id="cancel-delete"
+                class="modal-cancel"
+            >
+                CANCEL
+            </button>
+
+            <button
+                type="button"
+                id="confirm-delete"
+                class="modal-delete"
+            >
+                DELETE PROJECT
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     TOAST MESSAGE
+===================================================== -->
+
+<div
+    id="admin-toast"
+    class="admin-toast"
+    role="status"
+    aria-live="polite"
+>
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span id="toast-message">
+        Done
+    </span>
+
+</div>
+
+
+<!-- =====================================================
+     SUPABASE
+===================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="admin.js"></script>
+
+</body>
+</html>

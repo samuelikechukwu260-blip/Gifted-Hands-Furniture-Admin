@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | Gifted Hands</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= LOGIN PAGE ================= -->
+
+    <main class="admin-login">
+
+        <div class="login-card">
+
+            <!-- BRAND -->
+
+            <div class="admin-brand">
+
+                <div class="brand-mark">
+                    GH
+                </div>
+
+                <h1>GIFTED HANDS</h1>
+
+                <p>Furniture & Interior Designs</p>
+
+            </div>
+
+
+            <!-- LOGIN HEADER -->
+
+            <div class="login-heading">
+
+                <span class="admin-label">
+                    ADMINISTRATION
+                </span>
+
+                <h2>
+                    Welcome <span>Back.</span>
+                </h2>
+
+                <p>
+                    Sign in to manage your projects and portfolio.
+                </p>
+
+            </div>
+
+
+            <!-- LOGIN FORM -->
+
+            <form id="login-form">
+
+                <div class="form-group">
+
+                    <label for="email">
+                        EMAIL ADDRESS
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="password">
+                        PASSWORD
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="toggle-password"
+                            class="password-toggle"
+                            aria-label="Show password"
+                        >
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ERROR MESSAGE -->
+
+                <div
+                    id="login-error"
+                    class="login-message error"
+                    role="alert"
+                    aria-live="polite"
+                ></div>
+
+
+                <!-- LOGIN BUTTON -->
+
+                <button
+                    type="submit"
+                    id="login-button"
+                    class="login-button"
+                >
+
+                    <span id="login-button-text">
+                        SIGN IN
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </form>
+
+
+            <!-- SECURITY -->
+
+            <div class="login-security">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <span>
+                    Secure administrator access
+                </span>
+
+            </div>
+
+
+            <!-- BACK TO WEBSITE -->
+
+            <a
+                href="../index.html"
+                class="back-to-site"
+            >
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to website
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- SUPABASE -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- ADMIN JAVASCRIPT -->
+
+    <script src="admin.js"></script>
+
+</body>
+</html>
